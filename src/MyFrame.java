@@ -10,9 +10,13 @@ public class MyFrame extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new FlowLayout());
 
-        JRadioButton pizzaButton = new JRadioButton();
-        JRadioButton hamburgerButton = new JRadioButton();
-        JRadioButton hotdogButton = new JRadioButton();
+        JRadioButton pizzaButton = new JRadioButton("pizza");
+        JRadioButton hamburgerButton = new JRadioButton("hamburger");
+        JRadioButton hotdogButton = new JRadioButton("hotdog");
+
+        this.add(pizzaButton);
+        this.add(hamburgerButton);
+        this.add(hotdogButton);
 
         this.pack();
         this.setVisible(true);
