@@ -14,6 +14,11 @@ public class MyFrame extends JFrame implements ActionListener {
         JRadioButton hamburgerButton = new JRadioButton("hamburger");
         JRadioButton hotdogButton = new JRadioButton("hotdog");
 
+        ButtonGroup group = new ButtonGroup();
+        group.add(pizzaButton);
+        group.add(hamburgerButton);
+        group.add(hotdogButton);
+
         this.add(pizzaButton);
         this.add(hamburgerButton);
         this.add(hotdogButton);
