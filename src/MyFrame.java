@@ -5,19 +5,24 @@ import java.awt.event.ActionListener;
 
 
 public class MyFrame extends JFrame implements ActionListener {
+    JRadioButton pizzaButton;
+    JRadioButton hamburgerButton;
+    JRadioButton hotdogButton;
 
     MyFrame(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new FlowLayout());
 
-        JRadioButton pizzaButton = new JRadioButton("pizza");
-        JRadioButton hamburgerButton = new JRadioButton("hamburger");
-        JRadioButton hotdogButton = new JRadioButton("hotdog");
+       pizzaButton = new JRadioButton("pizza");
+       hamburgerButton = new JRadioButton("hamburger");
+       hotdogButton = new JRadioButton("hotdog");
 
         ButtonGroup group = new ButtonGroup();
         group.add(pizzaButton);
         group.add(hamburgerButton);
         group.add(hotdogButton);
+
+
 
         this.add(pizzaButton);
         this.add(hamburgerButton);
@@ -31,6 +36,13 @@ public class MyFrame extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource()==pizzaButton){
+            System.out.println("You ordered pizza!");
+        } else if (e.getSource()==hamburgerButton) {
+            System.out.println("You ordered a hamburger!");
+        } else if (e.getSource()==hotdogButton){
+            System.out.println("You ordered a hotdog");
+        }
 
     }
 }
