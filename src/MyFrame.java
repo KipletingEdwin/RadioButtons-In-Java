@@ -9,9 +9,17 @@ public class MyFrame extends JFrame implements ActionListener {
     JRadioButton hamburgerButton;
     JRadioButton hotdogButton;
 
+    ImageIcon pizzaIcon;
+    ImageIcon hamburgerIcon;
+    ImageIcon hotdogIcon;
+
     MyFrame(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new FlowLayout());
+
+        pizzaIcon = new ImageIcon("pizza.jpeg");
+        hamburgerIcon = new ImageIcon("hamburger.png");
+        hotdogIcon = new ImageIcon("hotdog.jpeg");
 
        pizzaButton = new JRadioButton("pizza");
        hamburgerButton = new JRadioButton("hamburger");
